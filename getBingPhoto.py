@@ -5,7 +5,7 @@ import re
 import datetime
 import sys
 
-preAdd = "E:\\py\\net\\"
+preAdd = "D:\\file\\py\\net\\"
 fileName = preAdd + "BingPhoto\\ErrorFile.txt"
 
 #利用datetime库将时间转化为字符串
@@ -31,7 +31,7 @@ def notDownloaded():
     ret = True
     with open(fileName) as file:
         for line in file:
-            if curDate in line:
+            if curDate in line and "successfully" in line:
                 ret = False
     return ret
 
